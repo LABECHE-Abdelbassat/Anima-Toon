@@ -106,7 +106,7 @@ const ResultPage = ({ type }) => {
   return (
     <div className="mt-5 text-light pt-4 container fs-1">
       <div className="d-flex mt-3 text-shadow align-items-center justify-content-between">
-        <strong>{type}</strong>
+        <strong className="text-shodow">{type}</strong>
       </div>
       <div className="row mt-5">
         {ResultMoviesList.map((item) => {
