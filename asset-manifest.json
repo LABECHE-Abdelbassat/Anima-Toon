@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/anima-toon/static/css/main.2f1ca847.css",
-    "main.js": "/anima-toon/static/js/main.f42bce0b.js",
+    "main.js": "/anima-toon/static/js/main.12657e54.js",
     "index.html": "/anima-toon/index.html",
     "main.2f1ca847.css.map": "/anima-toon/static/css/main.2f1ca847.css.map",
-    "main.f42bce0b.js.map": "/anima-toon/static/js/main.f42bce0b.js.map"
+    "main.12657e54.js.map": "/anima-toon/static/js/main.12657e54.js.map"
   },
   "entrypoints": [
     "static/css/main.2f1ca847.css",
-    "static/js/main.f42bce0b.js"
+    "static/js/main.12657e54.js"
   ]
 }
