@@ -9,6 +9,7 @@ import "./css/global.css";
 import { Route, Routes, HashRouter } from "react-router-dom";
 import axios from "axios";
 import ResultPage from "./components/ResultPage";
+import Footer from "./components/Footer";
 
 function App() {
   const [type, setType] = useState("");
@@ -30,6 +31,7 @@ function App() {
                 <Popular />
                 <TopRated />
                 <AllFilms />
+                <Footer modifyType={modifyType} />
               </div>
             }
           />
@@ -39,6 +41,7 @@ function App() {
               <div className="nav-bg">
                 <NavBar modifyType={modifyType} />
                 <ResultPage type={type} />
+                <Footer modifyType={modifyType} />
               </div>
             }
           />
