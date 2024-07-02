@@ -57,7 +57,7 @@ const NavBar = ({ modifyType }) => {
     <div className="position-absolute w-100 top-0 left-0 nav-bar">
       <Navbar data-bs-theme="dark" expand="lg" className="">
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="/anima-toon/">
             <strong>ANIMA TOON</strong>
           </Navbar.Brand>
           <Navbar.Toggle />
