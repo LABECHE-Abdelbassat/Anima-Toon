@@ -57,11 +57,15 @@ const Landing = () => {
             
         </div>
       </Carousel.Item> */}
-        {nowPlayingFilm.map((item) => {
+        {nowPlayingFilm.map((item, i) => {
+          if (i === 2 || i === 5) {
+            return "";
+          }
           return (
             <Carousel.Item key={item.id} className="position-relative">
               <img
                 className="img-fluid"
+                alt={item.title}
                 src={"https://image.tmdb.org/t/p/w1280/" + item.backdrop_path}
               ></img>
               <Carousel.Caption className=" container position-absolute carouselis-item">

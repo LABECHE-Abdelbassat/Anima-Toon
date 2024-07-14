@@ -95,7 +95,10 @@ const AllFilms = () => {
       {films?.length > 0 && (
         <>
           <div className="row mt-5">
-            {films.map((item) => {
+            {films.map((item, i) => {
+              if (i === 2 || i === 5) {
+                return "";
+              }
               return (
                 <div
                   onClick={() => hundleClickfilm(item.id)}
