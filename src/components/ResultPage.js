@@ -30,18 +30,18 @@ const ResultPage = ({ type }) => {
           getResultMoviesList(
             `https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&page=${p}&query=${localStorage.getItem(
               "searchValue"
-            )}&with_genres=16,10751`
-          )
-        );
-        break;
-      case "Up Coming":
-        dispatch(
-          getResultMoviesList(
-            `https://api.themoviedb.org/3/movie/upcoming?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false&page=${p}`
+            )}&with_genres=16`
           )
         );
         break;
       case "Top Rated":
+        dispatch(
+          getResultMoviesList(
+            `https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16&include_adult=false&query=dragon ball z&page=${p}`
+          )
+        );
+        break;
+        // case "Top Rated":
         dispatch(
           getResultMoviesList(
             `https://api.themoviedb.org/3/movie/top_rated?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false&page=${p}`

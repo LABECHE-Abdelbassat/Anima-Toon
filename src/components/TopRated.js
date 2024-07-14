@@ -17,7 +17,7 @@ const TopRated = () => {
   useEffect(() => {
     dispatch(
       getTopRatedMoviesList(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,12&include_video=true&include_adult=false&page=1"
+        `https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&query=dragon ball z&page=2`
       )
     );
   }, [dispatch]);
@@ -61,7 +61,7 @@ const TopRated = () => {
       </div>
       <div className="row mt-5">
         {topRatedMovies.map((item, i) => {
-          if (i < 4) {
+          if (i < 9 && i > 4) {
             return (
               <div
                 onClick={() => {

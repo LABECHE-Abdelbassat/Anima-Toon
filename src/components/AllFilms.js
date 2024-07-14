@@ -19,7 +19,7 @@ const AllFilms = () => {
   useEffect(() => {
     dispatch(
       getTheMoviesList(
-        `https://api.themoviedb.org/3/discover/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false&page=1`
+        `https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16&include_adult=false&query=dragon ball z&page=1`
       )
     );
   }, [dispatch]);
@@ -30,7 +30,7 @@ const AllFilms = () => {
     if (w === "n" && pageState.page < totalState) {
       dispatch(
         getTheMoviesList(
-          `https://api.themoviedb.org/3/discover/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false&page=${
+          `https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751include_adult=false&query=dragon ball z&page=${
             pageState.page + 1
           }`
         )
@@ -40,7 +40,7 @@ const AllFilms = () => {
     } else if (w === "p" && pageState.page > 1) {
       dispatch(
         getTheMoviesList(
-          `https://api.themoviedb.org/3/discover/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false&page=${
+          `https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751include_adult=false&query=dragon ball z&page=${
             pageState.page - 1
           }`
         )

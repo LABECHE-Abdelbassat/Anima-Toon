@@ -48,13 +48,6 @@ const Footer = ({ modifyType }) => {
           >
             Top Rated
           </Nav.Link>
-          <Nav.Link
-            className="text-light"
-            onClick={() => hundleClickComing()}
-            eventKey="3"
-          >
-            Up Coming
-          </Nav.Link>
         </Nav>
       </div>
 

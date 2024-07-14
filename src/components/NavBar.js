@@ -17,20 +17,20 @@ const NavBar = ({ modifyType }) => {
   const inputSearch = useRef(null);
   const navigation = useNavigate();
 
-  function hundleClickComing() {
-    dispatch(
-      getResultMoviesList(
-        "https://api.themoviedb.org/3/movie/upcoming?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false"
-      )
-    );
-    dispatch({ type: "RESET PAGE" });
-    modifyType("Up Coming");
-    navigation("/films");
-  }
+  // function hundleClickComing() {
+  //   dispatch(
+  //     getResultMoviesList(
+  //       "https://api.themoviedb.org/3/movie/upcoming?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false"
+  //     )
+  //   );
+  //   dispatch({ type: "RESET PAGE" });
+  //   modifyType("Up Coming");
+  //   navigation("/films");
+  // }
   function hundleClickRated() {
     dispatch(
       getResultMoviesList(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false"
+        "https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16&include_adult=false&query=dragon ball z"
       )
     );
     dispatch({ type: "RESET PAGE" });
@@ -42,9 +42,9 @@ const NavBar = ({ modifyType }) => {
     e.preventDefault();
     dispatch(
       getResultMoviesList(
-        "https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&region=US&language=en&page=1&query=" +
+        "https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&region=US&language=en&page=1&query=dragon ball " +
           inputSearch.current.value +
-          "&with_genres=16,10751"
+          "&with_genres=16"
       )
     );
     localStorage.setItem("searchValue", inputSearch.current.value);
@@ -65,9 +65,6 @@ const NavBar = ({ modifyType }) => {
             <Nav className="me-auto my-2 my-lg-0">
               <Nav.Link onClick={() => hundleClickRated()} eventKey="2">
                 Top Rated
-              </Nav.Link>
-              <Nav.Link onClick={() => hundleClickComing()} eventKey="3">
-                Up Coming
               </Nav.Link>
             </Nav>
             <Form className="d-flex form-search position-relative">

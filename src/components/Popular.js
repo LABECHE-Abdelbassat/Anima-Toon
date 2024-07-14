@@ -17,7 +17,7 @@ const Popular = () => {
   useEffect(() => {
     dispatch(
       getUpComingMoviesList(
-        `https://api.themoviedb.org/3/movie/upcoming?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&include_video=true&include_adult=false&page=1`
+        `https://api.themoviedb.org/3/search/movie?api_key=52ef927bbeb21980cd91386a29403c78&language=en&with_genres=16,10751&query=dragon ball z&page=2`
       )
     );
   }, [dispatch]);
